@@ -43,8 +43,7 @@ async function removeNote(id) {
   await saveNotes(filtered);
   console.log(chalk.red(`Note with id="${id}" has been removed.`));
 }
-async function editNote(id, title) {
- console.log(title)
+async function editNote(id, title) { 
   const notes = await getNotes();
   const edited = notes.map((note) => {
     if (note.id === id) { 
